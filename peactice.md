@@ -1,6 +1,6 @@
 # Manual steps to install kubernetes
 
-![Preview](/Images/kubernetes6.PNG)
+![Preview](./Images/kubernetes6.PNG)
 
 * create 2 vms and login 
 ###  ----steps to be done in both the nodes----
