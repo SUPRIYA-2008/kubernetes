@@ -6,7 +6,7 @@
 ###  ----steps to be done in both the nodes----
 
 1. install DOCKER in both the vms
-![Refer here](https://get.docker.com/)
+[Refer here](https://get.docker.com/)
    - $ curl -fsSL https://get.docker.com -o install-docker.sh
    - $ sh install-docker.sh
 ![Preview](/Image/kubernetes1.PNG)
@@ -20,13 +20,13 @@
  * logout and login
    - $ logout
 2. To install CRI-dockerd and get the latest releases
-![Refer here](https://github.com/Mirantis/cri-dockerd/releases)
+[Refer here](https://github.com/Mirantis/cri-dockerd/releases)
    - $ wget https://github.com/Mirantis/cri-dockerd/releases/download/v0.3.4/   cri-dockerd_0.3.4.3-0.ubuntu-jammy_amd64.deb
    - $ sudo dpkg -i cri-dockerd_0.3.4.3-0.ubuntu-jammy_amd64.deb     (### dabean package )
 ![Preview](/Image/kubernetes4.PNG)
 
 3.  Install kubeadm, kubectl and kubelet on 2 nodes 
-![Refer here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl)
+[Refer here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/#installing-kubeadm-kubelet-and-kubectl)
 
    1. Update the apt package index and install packages needed to use the Kubernetes apt repository:
       - $ sudo apt-get update
@@ -46,7 +46,7 @@
 # ---Execute the following on master node---
 
 4. Now Lets create a k8s cluster using kubeadm 
-![Refer here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
+[Refer here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
 
 5. Lets initialize the cluster using the following command as a root user
     - $ sudo -i
