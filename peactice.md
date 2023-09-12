@@ -45,7 +45,7 @@
      ![Preview](/Image/kubernetes5.PNG)
 
 ### ---Execute the following on master node---
-
+ 
 4. Now Lets create a k8s cluster using kubeadm 
 [Refer here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
 
@@ -68,10 +68,10 @@
 
 ![Preview](/Image/kubernetes10.PNG)
 
-## ---Execute the command in worker node---
+### ---Execute the command in worker node---
 
 8. Now as a root user in workernode execute the join command  
-     ## we will get after initialise step
+     ### we will get after initialise step
 
    - ` kubeadm join 172.31.13.69:6443 --token t0hkv6.es6qexws9lhbbi5x \
         --discovery-token-ca-cert-hash sha256:d80f37bfb0dc701380dc1fb816cda39b91e84b841b3263d954c141507ae6929a \
@@ -79,7 +79,7 @@
 
 ![Preview](/Image/kubernetes11.PNG)
 
-## ---execute in master node---
+### ---execute in master node---
 
 9. Now execute kubectl get nodes from master node
    - ` kubectl get nodes`
