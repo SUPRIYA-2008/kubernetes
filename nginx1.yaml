@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Container
+metadata: 
+  name: nginx
+spec: 
+  name: nginx1
+  image: nginx
+  ports:
+    - containerPort: 8080
+      
+ 
