@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: nginxLables
+  name: nginxlables
   labels: 
     app: nginx
     project: application
