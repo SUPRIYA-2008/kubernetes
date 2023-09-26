@@ -21,7 +21,7 @@ metadata:
   name: nginx2
   labels: 
     app: nginx
-    project: application1
+    project: application
 spec:
   containers:
     - name: nginx
@@ -35,7 +35,7 @@ kind: Pod
 metadata: 
   name: nginx3
   labels: 
-    app: nginx
+    app: nginxx
     project: application
 spec:
   containers:
