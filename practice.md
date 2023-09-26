@@ -14,7 +14,7 @@ Cluster is collection of compute, storage and networking resources that Kubernet
   * Declarative Approach
 
 ### Architecture
-[Preview](./Image/kubernetes15.webp)
+![Preview](./Image/kubernetes15.webp)
 
 ## softwares to be installedfor azure kubernetes services
 
@@ -33,18 +33,18 @@ Cluster is collection of compute, storage and networking resources that Kubernet
 ### Understand K8s resources from 10,000 feet
 #### Pod:
  Pod is atomic unit of creation in k8s and it contains container(s). Each Pod has unique ip address
-[Preview](./Image/kubernetes16.PNG)
+![Preview](./Image/kubernetes16.PNG)
 
 ### Label: 
 This is name/value pair used to query resources in k8s. used in services, replicasets, deployments etc…
 
 ### Controllers:
 Replication Controller or Replica Set: They maintain a state of number of replicas of pods
-[Preview](./Image/kubernetes17.PNG)
+![Preview](./Image/kubernetes17.PNG)
 
 ### Deployment:
 This enables performing zero downtime deployments with features to rollout a new version and undo rollout
-[Preview](./Image/kubernetes18.PNG)
+![Preview](./Image/kubernetes18.PNG)
 
 ### Horizontal Pod AutoScaler:
 Allows us to autoscale pods based on some metrics like cpu, network etc…
@@ -77,20 +77,20 @@ spec:
 status:
 ```
 
-#### 1.apiVersion
+### 1.apiVersion
  - note: if the apiGroup is not core
 apiVersion: <apiGroup>/<version>
 
  - if the apiGroup is core
 apiVersion: <version>
 
-#### 2 kind
+### 2.kind
 controller type eg: pods, replicset,replication controller, cronjob etc
 
-#### 3. metadata
+### 3. metadata
 This helps in naming and labelling resources in k8s
 
-#### 4. spec
+### 4. spec
 This contains the details about the object. For example, for a pod, it would contain which container image it would run, the ports to expose, the labels, and more.
 
 ### steps to run a manifest yaml
@@ -119,9 +119,9 @@ $ `kubectl get pods -w`       # to watch internal functionality
 $ `kubectl get pods -o wide`  # shows the output with more information
 $ `kubectl api-resources`     # Kubernetes allows us to view all the resources using kubectl
 $ `kubectl describe pod`      # show what happends in side the pod
-[Preview](./Image/kubernetes19.PNG)
-[Preview](./Image/kubernetes20.PNG)
-[Preview](./Image/kubernetes21.PNG)
+![Preview](./Image/kubernetes19.PNG)
+![Preview](./Image/kubernetes20.PNG)
+![Preview](./Image/kubernetes21.PNG)
 
 
 #### Note: In kubernetes we can not run two containers which use the same port in one pod.
