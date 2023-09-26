@@ -4,11 +4,10 @@ kind: ReplicaSet
 metadata:
   name: jenkins-rs
   labels: 
-    app: jenkins
-    project: one
+    purpose: rsdemo
 spec:
   minReadySeconds: 3
-  replicas: 5
+  replicas: 3
   selector: 
     matchLabels: 
       app: jenkins
@@ -22,9 +21,9 @@ spec:
       containers:
         - name: jenkins
           image: jenkins/jenkins
-      ports: 
-        - containerPort: 8080
-          protocol: TCP
+          ports: 
+            - containerPort: 8080
+              protocol: TCP
               
 
           
