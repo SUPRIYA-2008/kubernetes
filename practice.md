@@ -120,19 +120,25 @@ spec:
     - name: webserver
       image: nginx:1.25
 ```
-* $ `kubectl get nodes`
-* $ `kubectl apply -f nginx.yaml`  
-* $ `kubectl get pods`          # list of pods
-* $ `kubectl get pods -w`       # to watch internal functionality
-* $ `kubectl get pods -o wide`  # shows the output with more information
-* $ `kubectl api-resources`     # Kubernetes allows us to view all the resources using kubectl
-* $ `kubectl describe pod`      # show what happends in side the pod
+*  `kubectl get nodes`
+*  `kubectl apply -f nginx.yaml`  
+*  `kubectl get pods` 
+   - list of pods
+*  `kubectl get pods -w`      
+   - to watch internal functionality
+*  `kubectl get pods -o wide` 
+   - shows the output with more information
+*  `kubectl api-resources`   
+   - Kubernetes allows us to view all the resources using kubectl
+*  `kubectl describe pod`      
+   - show what happends in side the pod
 ![Preview](./Image/kubernetes19.PNG)
 ![Preview](./Image/kubernetes20.PNG)
 ![Preview](./Image/kubernetes21.PNG)
 
 
-#### Note: In kubernetes we can not run two containers which use the same port in one pod.
+#### Note: 
+In kubernetes we can not run two containers which use the same port in one pod.
 
 #### Scaling: 
 Scaling in k8s means increasing number of Pods not containers in Pod. For Scaling pods we would learn Replica set/Replication Controller etcs..
@@ -146,6 +152,9 @@ Scaling in k8s means increasing number of Pods not containers in Pod. For Scalin
 * Labels are used to select/query kubernetes objects
 * Labels are just like stickers. Name of the label does not have any functionality that is running inside the container.
 * Labels are given just to identify quicker the objects.
+
+
+
 
 
 
