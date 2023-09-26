@@ -20,23 +20,26 @@ Cluster is collection of compute, storage and networking resources that Kubernet
 
 - install azure-cli
   `choco install azure-cli`
-
-   `choco install kubernetes-cli`
-   az login
-   az aks get-credentials
+  `choco install kubernetes-cli`
+  `az login`
+  `az aks get-credentials`
    
 
 
 
 
 
-### Understand K8s resources from 10,000 feet
-#### Pod:
+### Understand K8s resources 
+### Pod:
  Pod is atomic unit of creation in k8s and it contains container(s). Each Pod has unique ip address
 ![Preview](./Image/kubernetes16.PNG)
 
+### Replicaset: 
+ maintaines the state of the pods.If the pod dies it runs the pods on new nodes.
+
 ### Label: 
 This is name/value pair used to query resources in k8s. used in services, replicasets, deployments etc…
+* kubernetes identifies all the resources with the help of lables.
 
 ### Controllers:
 Replication Controller or Replica Set: They maintain a state of number of replicas of pods
@@ -54,8 +57,8 @@ Allows us to autoscale pods based on some metrics like cpu, network etc…
      `kubectl run nginx --image nginx`
 2. Declaratively
      Create a yaml file with below content and execute
-     `kubectl apply -f <filename.yaml>`    to create 
-     `kubectl delete -f <filename.yaml>`   to delete
+     `kubectl apply -f <filename.yaml>`    
+     `kubectl delete -f <filename.yaml>`   
 ### Creating Pod Manifests
 * The basic skeleton manifest which is suitable for majority of resources
 
@@ -93,6 +96,11 @@ This helps in naming and labelling resources in k8s
 ### 4. spec
 This contains the details about the object. For example, for a pod, it would contain which container image it would run, the ports to expose, the labels, and more.
 
+### Note: 
+* if you have string write in same line.
+* if you have to go inside the resource go to next line and give 2 spaces.
+* if you have array for thr resource go to next line  give 2 spaces and a hifen "-" and 1 space.
+
 ### steps to run a manifest yaml
 
 1. create an file with yaml extensions
@@ -112,13 +120,13 @@ spec:
     - name: webserver
       image: nginx:1.25
 ```
-$ `kubectl get nodes`
-$ `kubectl apply -f nginx.yaml`  
-$ `kubectl get pods`          # list of pods
-$ `kubectl get pods -w`       # to watch internal functionality
-$ `kubectl get pods -o wide`  # shows the output with more information
-$ `kubectl api-resources`     # Kubernetes allows us to view all the resources using kubectl
-$ `kubectl describe pod`      # show what happends in side the pod
+* $ `kubectl get nodes`
+* $ `kubectl apply -f nginx.yaml`  
+* $ `kubectl get pods`          # list of pods
+* $ `kubectl get pods -w`       # to watch internal functionality
+* $ `kubectl get pods -o wide`  # shows the output with more information
+* $ `kubectl api-resources`     # Kubernetes allows us to view all the resources using kubectl
+* $ `kubectl describe pod`      # show what happends in side the pod
 ![Preview](./Image/kubernetes19.PNG)
 ![Preview](./Image/kubernetes20.PNG)
 ![Preview](./Image/kubernetes21.PNG)
@@ -138,6 +146,8 @@ Scaling in k8s means increasing number of Pods not containers in Pod. For Scalin
 * Labels are used to select/query kubernetes objects
 * Labels are just like stickers. Name of the label does not have any functionality that is running inside the container.
 * Labels are given just to identify quicker the objects.
+
+
 
 
 
