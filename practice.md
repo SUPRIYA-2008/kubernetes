@@ -16,6 +16,20 @@ Cluster is collection of compute, storage and networking resources that Kubernet
 ### Architecture
 [Preview](./Image/kubernetes15.webp)
 
+## softwares to be installedfor azure kubernetes services
+
+- install azure-cli
+  `choco install azure-cli`
+
+   `choco install kubernetes-cli`
+   az login
+   az aks get-credentials
+   
+
+
+
+
+
 ### Understand K8s resources from 10,000 feet
 #### Pod:
  Pod is atomic unit of creation in k8s and it contains container(s). Each Pod has unique ip address
@@ -104,6 +118,11 @@ $ `kubectl get pods`          # list of pods
 $ `kubectl get pods -w`       # to watch internal functionality
 $ `kubectl get pods -o wide`  # shows the output with more information
 $ `kubectl api-resources`     # Kubernetes allows us to view all the resources using kubectl
+$ `kubectl describe pod`      # show what happends in side the pod
+[Preview](./Image/kubernetes19.PNG)
+[Preview](./Image/kubernetes20.PNG)
+[Preview](./Image/kubernetes21.PNG)
+
 
 #### Note: In kubernetes we can not run two containers which use the same port in one pod.
 
@@ -119,6 +138,10 @@ Scaling in k8s means increasing number of Pods not containers in Pod. For Scalin
 * Labels are used to select/query kubernetes objects
 * Labels are just like stickers. Name of the label does not have any functionality that is running inside the container.
 * Labels are given just to identify quicker the objects.
+
+
+
+
 
 
 
