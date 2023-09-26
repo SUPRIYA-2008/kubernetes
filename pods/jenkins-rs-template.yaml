@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata: 
+  name: jnks
+  labels:
+    purpose: rsdemo
+spec:
+  minReadySeconds: 3
+  replicas: 4
+  selector: 
+    matchLabels:
+      app: jenkins
+      version: v1
+  template: 
+    metadata: 
+      name: jenkins1
+      labels: 
+        app: jenkins
+        release: v1
+    spec:   
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins
+          ports: 
+            - containerPort: 8080
+              protocol: TCP
+        
+          
+
+          
