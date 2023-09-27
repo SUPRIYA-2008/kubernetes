@@ -179,6 +179,19 @@ Scaling in k8s means increasing number of Pods not containers in Pod. For Scalin
 
 ### trying a container which exits and see the result:
 
+![preview](./Image/kubernetes27.PNG)
+![preview](./Image/kubernetes28.PNG)
+
+### * Crashloopbackoff: 
+when the container gets exited the kubernetes shows "crashloopbackoff" 
+* kubernetes tries to restart the container in side the pod when ever it gets exited.
+
+
+
+
+
+
+
 
 
 
