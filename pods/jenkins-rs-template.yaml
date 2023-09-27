@@ -16,7 +16,7 @@ spec:
     metadata: 
       labels: 
         app: jenkins
-        version: v1
+        project: application
     spec: 
       containers:
         - name: jenkins

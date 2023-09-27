@@ -203,6 +203,44 @@ there are three functionalities
  This is where we run actual applications and they are expected to be living forever (continously).
 
  * init containers run one after the other , where as main containers run parallely.
+![Preview](./Image/kubernetes31.PNG)
+![Preview](./Image/kubernetes32.PNG)
+
+### ---Activity---
+1. Create a nginx container with 128 MB of RAM
+2. Create a jenkins continer with “0.5” cpu and 256 MB of RAM
+
+`docker container run  -P -d  --memory 128m nginx`
+`docker container run --name r-memcpu-jenkins -P -d --cpus="0.5" --memory 256m jenkins/jenkins`
+`docker stats `
+
+### lets write a manifest for this in kubernetes
+### * Resource Restrictions in Pods :
+Limits in Resoruce Restrictions mean maximum size that will be allocated (upper bounds/limits) and request are lower limits
+
+### Controllers: 
+* Pod tries to keep containers running, but for us we need to keep Pods running according to some state, Lets understand first two categories
+### - Replicas:
+Here we have two resources ReplicationController, ReplicaSet
+#### * ReplicationController:
+This is the old version of the controllers.They only support equality based controllers.
+#### * ReplicaSet:
+Replicaset is the new version. They supproy both set based and equality based controllers.
+
+- Here our desired state (spec) will be
+1. number of replicas
+2. pod spec
+3. label selector
+- These objects try maintain the desired
+
+![Preview](./Image/kubernetes33.PNG)
+![Preview](./Image/kubernetes34.PNG)
+
+#### * Creating 2 pods and running replicaset yaml to see the desired state
+* creating 2 nginx containers and running the replicaset of count 3 yaml 
+  - Kubernetes will only create one pod, As there are 2 pods which already having same labels.
+  ### Note: By this we can conclude that kubernetes will maintain their state of replicas with the matching labels.
+
 
 
 
