@@ -36,7 +36,7 @@ metadata:
   name: nginx3
   labels: 
     app: jenkins
-    project: application
+    version: v1
 spec:
   containers:
     - name: nginx
