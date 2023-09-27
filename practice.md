@@ -186,6 +186,26 @@ Scaling in k8s means increasing number of Pods not containers in Pod. For Scalin
 when the container gets exited the kubernetes shows "crashloopbackoff" 
 * kubernetes tries to restart the container in side the pod when ever it gets exited.
 
+### * restartPolocy:
+there are three functionalities
+- never
+- onfailure
+- always
+
+* in the below example i have put never so kubernetes does not restart the container
+![Preview](./Image/kubernetes29.PNG)
+![Preview](./Image/kubernetes30.PNG)
+
+### Container types in Pod
+#### 1.init containers:
+ These containers are created prior to actual/main containers. ideally these containers should be short lived and majorly for meeting preconditions to run your application. 
+#### 2.containers:
+ This is where we run actual applications and they are expected to be living forever (continously).
+
+ * init containers run one after the other , where as main containers run parallely.
+
+
+
 
 
 
