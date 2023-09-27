@@ -137,13 +137,13 @@ spec:
 ![Preview](./Image/kubernetes21.PNG)
 
 
-#### Note: 
+### Note: 
 In kubernetes we can not run two containers which use the same port in one pod.
 
-#### Scaling: 
+### Scaling: 
 Scaling in k8s means increasing number of Pods not containers in Pod. For Scaling pods we would learn Replica set/Replication Controller etcs..
 
-#### Label
+### Label
 * Lable is a key pair examples are
 ```
      app: nginx
@@ -152,6 +152,44 @@ Scaling in k8s means increasing number of Pods not containers in Pod. For Scalin
 * Labels are used to select/query kubernetes objects
 * Labels are just like stickers. Name of the label does not have any functionality that is running inside the container.
 * Labels are given just to identify quicker the objects.
+
+`kubectl get pods --show-label`
+* shows all pods with lables
+![Preview](./Image/kubernetes22.PNG)
+
+### Selector: 
+* Selectors in k8s help in querying objects using labels
+* selectors are of two types
+   1. Equality Based Selectors
+      - supports only equal and not equal lables as shown below it supports only app=nginx
+   2. Set based selectors
+      - supports more than one labels gives more flexibity
+![preview](./Image/kubernetes23.PNG)
+
+### Interacting with containers:
+* In docker `docker container exec -it` or `docker container exec`
+* In k8s we have `kubectl exec <pod name> -- <...>` 
+![preview](./Image/kubernetes24.PNG)
+
+* when we deal with multiple containers and we want to access one container in them the command is 
+`kubectl exec <pod-name> -c <conatiner-name> -- <...>`
+
+![preview](./Image/kubernetes25.PNG)
+![preview](./Image/kubernetes26.PNG)
+
+### trying a container which exits and see the result:
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
