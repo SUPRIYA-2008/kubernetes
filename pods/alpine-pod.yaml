@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: alpina-pod
+  name: alpine-pod
   labels:
     purpose: no-cmd
 spec:
   containers:
-    - name: alpina
-      image: alpina
-      
+    - name: alpine
+      image: alpine
+
