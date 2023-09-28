@@ -16,7 +16,7 @@ spec:
         values:
           - jenkins
           - hudson
-      - key: release
+      - key: version
         operator: Exists
   template:    
     metadata: 
