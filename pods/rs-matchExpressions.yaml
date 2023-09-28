@@ -10,12 +10,12 @@ spec:
   minReadySeconds: 2
   replicas: 4
   selector: 
-    matchExpressions: 
+    matchExpressions:
       - key: app
         operator: In
-        values: 
+        values:
           - jenkins
-          - nginx
+          - hudson
       - key: release
         operator: Exists
   template:    
