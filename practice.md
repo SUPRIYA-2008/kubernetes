@@ -265,8 +265,23 @@ Replicaset is the new version. They supproy both set based and equality based co
   - Kubernetes will only create 2 pods, As there is one pod of nginx with same labels.
   ### Note: By this we can conclude that kubernetes will maintain their state of replicas with the matching labels irrespective of what container is running inside the pod.
 
+### Selectors are of 2 types
+#### 1. MatchLables:
+These select only equity based labels.i.e, only equal and not equal labels are supported.  
+
 ![Preview](./Image/kubernetes35.PNG)
 ![Preview](./Image/kubernetes36.PNG)
+
+#### 2. MatchExpressions:
+These gives more flexibility where they support labels irrespective of value in the labels
+1. key
+2. Operator
+3. values
+
+![Preview](./Image/kubernetes37.PNG)
+![Preview](./Image/kubernetes38.PNG)
+
+
 
 
 
