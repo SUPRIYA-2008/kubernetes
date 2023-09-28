@@ -6,6 +6,25 @@
 ### Cluster: 
 Cluster is collection of compute, storage and networking resources that Kubernetes uses to run workloads.
 
+### Kubernetes cluster can be created in 2 ways
+1. mannual installation 
+  - we install required softwares in a virtual machine and nodes
+2. using cloud Kubernetes services
+  1. Azure Kubernetes Services(AKS)
+  2. Amazon Elastic Kubernetes Service (Amazon EKS)  
+  3. Google Kubernetes Engine (GKE)
+
+###  Azure Kubernetes Services(AKS)
+#### Steps to create aks
+1. Basic
+2. Node Pools
+3. Networking
+4. Integrations
+5. Advanced
+6. Tags
+7. Review+create
+
+
 ### K8s provides the following features
   * Development Velocity
   * Scaling
@@ -209,10 +228,11 @@ there are three functionalities
 ### ---Activity---
 1. Create a nginx container with 128 MB of RAM
 2. Create a jenkins continer with “0.5” cpu and 256 MB of RAM
-
-* `docker container run  -P -d  --memory 128m nginx`
-* `docker container run --name r-memcpu-jenkins -P -d --cpus="0.5" --memory 256m jenkins/jenkins`
-* `docker stats `
+```
+docker container run  -P -d  --memory 128m nginx
+docker container run --name r-memcpu-jenkins -P -d --cpus="0.5" --memory 256m jenkins/jenkins
+docker stats 
+```
 
 ### lets write a manifest for this in kubernetes
 ### Resource Restrictions in Pods :
@@ -243,7 +263,7 @@ Replicaset is the new version. They supproy both set based and equality based co
      version: v1
 ```
   - Kubernetes will only create 2 pods, As there is one pod of nginx with same labels.
-  ### Note: By this we can conclude that kubernetes will maintain their state of replicas with the matching labels.
+  ### Note: By this we can conclude that kubernetes will maintain their state of replicas with the matching labels irrespective of what container is running inside the pod.
 
 ![Preview](./Image/kubernetes35.PNG)
 ![Preview](./Image/kubernetes36.PNG)

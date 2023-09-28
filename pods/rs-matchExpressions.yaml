@@ -1,0 +1,42 @@
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: matchExpressions
+  labels: 
+    app: jenkins
+    version: v1
+spec:
+  minReadySeconds: 2
+  replicas: 4
+  selector: 
+    matchExpressions: 
+      - key: app
+        operator: In
+        values: 
+          - jenkins
+          - nginx
+      - key: release
+        operator: Exists
+  template:    
+    metadata: 
+      name: jenkins
+      labels: 
+        app: jenkins
+        version: v1
+    spec: 
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins
+          ports: 
+            - containerPort: 8080
+              protocol: TCP
+              
+
+
+
+
+  
+ 
+      
+
