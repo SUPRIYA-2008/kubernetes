@@ -238,8 +238,8 @@ Replicaset is the new version. They supproy both set based and equality based co
 
 #### * Creating 2 pods and running replicaset yaml to see the desired state
 * creating 3 nginx containers with 2same labels ,1 different label and running the replicaset of count 3 yaml 
-- `app: jenkins
-      version: v1`
+- ```app: jenkins
+     version: v1```
   - Kubernetes will only create 2 pods, As there is one pod of nginx with same labels.
   ### Note: By this we can conclude that kubernetes will maintain their state of replicas with the matching labels.
 
