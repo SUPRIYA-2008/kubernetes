@@ -172,7 +172,7 @@ Scaling in k8s means increasing number of Pods not containers in Pod. For Scalin
 ![preview](./Image/kubernetes24.PNG)
 
 * when we deal with multiple containers and we want to access one container in them the command is 
-`kubectl exec <pod-name> -c <conatiner-name> -- <...>`
+- `kubectl exec <pod-name> -c <conatiner-name> -- <...>`
 
 ![preview](./Image/kubernetes25.PNG)
 ![preview](./Image/kubernetes26.PNG)
@@ -197,9 +197,9 @@ there are three functionalities
 ![Preview](./Image/kubernetes30.PNG)
 
 ### Container types in Pod
-#### 1.init containers:
+#### 1.Init containers:
  These containers are created prior to actual/main containers. ideally these containers should be short lived and majorly for meeting preconditions to run your application. 
-#### 2.containers:
+#### 2.Containers:
  This is where we run actual applications and they are expected to be living forever (continously).
 
  * init containers run one after the other , where as main containers run parallely.
@@ -210,12 +210,12 @@ there are three functionalities
 1. Create a nginx container with 128 MB of RAM
 2. Create a jenkins continer with “0.5” cpu and 256 MB of RAM
 
-`docker container run  -P -d  --memory 128m nginx`
-`docker container run --name r-memcpu-jenkins -P -d --cpus="0.5" --memory 256m jenkins/jenkins`
-`docker stats `
+* `docker container run  -P -d  --memory 128m nginx`
+* `docker container run --name r-memcpu-jenkins -P -d --cpus="0.5" --memory 256m jenkins/jenkins`
+* `docker stats `
 
 ### lets write a manifest for this in kubernetes
-### * Resource Restrictions in Pods :
+### Resource Restrictions in Pods :
 Limits in Resoruce Restrictions mean maximum size that will be allocated (upper bounds/limits) and request are lower limits
 
 ### Controllers: 
@@ -237,9 +237,17 @@ Replicaset is the new version. They supproy both set based and equality based co
 ![Preview](./Image/kubernetes34.PNG)
 
 #### * Creating 2 pods and running replicaset yaml to see the desired state
-* creating 2 nginx containers and running the replicaset of count 3 yaml 
-  - Kubernetes will only create one pod, As there are 2 pods which already having same labels.
+* creating 3 nginx containers with 2same labels ,1 different label and running the replicaset of count 3 yaml 
+- `app: jenkins
+      version: v1`
+  - Kubernetes will only create 2 pods, As there is one pod of nginx with same labels.
   ### Note: By this we can conclude that kubernetes will maintain their state of replicas with the matching labels.
+
+![Preview](./Image/kubernetes35.PNG)
+![Preview](./Image/kubernetes36.PNG)
+
+
+
 
 
 
