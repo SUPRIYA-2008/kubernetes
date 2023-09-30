@@ -43,6 +43,17 @@ Cluster is collection of compute, storage and networking resources that Kubernet
   `az login`
   `az aks get-credentials`
    
+  
+  - install eks:
+   * install awscli
+   `choco install awscli -y`
+   `choco install eksctl -y`
+   `aws configure`
+   `aws s3 ls`  
+   - #list of s3 buckets
+
+   * Command Line Interface (CLI)
+
 
 
 
@@ -280,6 +291,12 @@ These gives more flexibility where they support labels irrespective of value in 
 
 ![Preview](./Image/kubernetes37.PNG)
 ![Preview](./Image/kubernetes38.PNG)
+
+`kubectl get rs`
+
+
+
+
 
 
 

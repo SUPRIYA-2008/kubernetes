@@ -1,0 +1,12 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: supriya-cluster
+  region: ap-south-1
+
+nodeGroups:
+  - name: node1
+    instanceType: t3.medium
+    desiredCapacity: 2
+ 
