@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: supriya-cluster
-  region: ap-south-1
+  region: us-east-1
 
 nodeGroups:
   - name: node1
