@@ -13,6 +13,8 @@ Cluster is collection of compute, storage and networking resources that Kubernet
   1. Azure Kubernetes Services(AKS)
   2. Amazon Elastic Kubernetes Service (Amazon EKS)  
   3. Google Kubernetes Engine (GKE)
+3. CLI (through yamlfile)
+4. Using Terraform  
 
 ###  Azure Kubernetes Services(AKS)
 #### Steps to create aks
@@ -53,6 +55,29 @@ Cluster is collection of compute, storage and networking resources that Kubernet
    - #list of s3 buckets
 
    * Command Line Interface (CLI)
+   - [Referhere](https://eksctl.io/usage/creating-and-managing-clusters/)
+
+* To create in eks we need to add the yaml file in the repository
+```
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: supriya-cluster
+  region: us-east-1
+
+nodeGroups:
+  - name: node1
+    instanceType: t3.medium
+    desiredCapacity: 2
+ ```
+* to create cluster 
+- `eksctl create cluster -f <yamlfilename>`
+* go to instaces and check for worker nodes
+- `eksctl delete cluster -f <yamlfilename>`
+
+
+
 
 
 
@@ -292,7 +317,7 @@ These gives more flexibility where they support labels irrespective of value in 
 ![Preview](./Image/kubernetes37.PNG)
 ![Preview](./Image/kubernetes38.PNG)
 
-`kubectl get rs`
+- `kubectl get rs`
 
 
 
