@@ -1,0 +1,22 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata: 
+  name: job1
+  labels:
+    app: alpine
+spec: 
+  backoffLimit: 2
+  template: 
+    metadata: 
+      name: alpine
+      labels: 
+        app: alpine
+    spec:     
+      restartPolicy: Always
+      containers:
+        - name: alpine
+          image: alpine
+          command:
+                - sleep
+                - 10d

@@ -6,7 +6,7 @@ metadata:
   labels:
     purpose: cronjobdemo
 spec:
-  schedule: '*/5 * * * *'
+  schedule: '* * * * *'
   jobTemplate:
     metadata:
       labels:
