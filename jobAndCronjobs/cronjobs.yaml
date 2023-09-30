@@ -12,15 +12,13 @@ spec:
       labels:
         purpose: jobdemo
     spec:
-      selector:
-        matchLabels:
-          app: batch
       backoffLimit: 3
       template:
         metadata:
           labels:
             app: batch
         spec:
+          restartPolicy: OnFailure
           containers:
             - name: batchdemo
               image: alpine
