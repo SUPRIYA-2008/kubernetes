@@ -13,7 +13,7 @@ spec:
       labels: 
         app: alpine
     spec:     
-      restartPolicy: Always
+      restartPolicy: OnFailure
       containers:
         - name: alpine
           image: alpine

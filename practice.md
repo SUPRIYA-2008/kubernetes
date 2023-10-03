@@ -319,6 +319,33 @@ These gives more flexibility where they support labels irrespective of value in 
 
 - `kubectl get rs`
 
+### Jobs and Cron Jobs:
+
+* Lets write a Cron Job which runs alpine pod with some script for every min.
+
+![Preview](./Image/kubernetes39.PNG)
+![Preview](./Image/kubernetes40.PNG)
+![Preview](./Image/kubernetes41.PNG)
+![Preview](./Image/kubernetes42.PNG)
+
+### jobs:
+One time task is done by jobs.Job completes its task and goes in to completed state.
+### Cronjobs :
+the job which has moe than one task is called CronJob.For example these are done for every min or every day or every hour.Cronjobs goes on doing after completing its task depending on we have written in the job spec.
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
