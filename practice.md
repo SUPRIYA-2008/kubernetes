@@ -322,17 +322,41 @@ These gives more flexibility where they support labels irrespective of value in 
 ### Jobs and Cron Jobs:
 
 * Lets write a Cron Job which runs alpine pod with some script for every min.
+### jobs:
+One time task is done by jobs.Job completes its task and goes in to completed state.
+
+![Preview](./Image/kubernetes43.PNG)
+
+### Cronjobs :
+the job which has moe than one task is called CronJob.For example these are done for every min or every day or every hour.Cronjobs goes on doing after completing its task depending on we have written in the job spec.
 
 ![Preview](./Image/kubernetes39.PNG)
 ![Preview](./Image/kubernetes40.PNG)
 ![Preview](./Image/kubernetes41.PNG)
 ![Preview](./Image/kubernetes42.PNG)
 
-### jobs:
-One time task is done by jobs.Job completes its task and goes in to completed state.
-### Cronjobs :
-the job which has moe than one task is called CronJob.For example these are done for every min or every day or every hour.Cronjobs goes on doing after completing its task depending on we have written in the job spec.
- 
+### Namespace
+* Namespace in k8s is a logical space or logical cluster in which resources will be created
+* Any resource which has a value of Namespace = true belongs in a namespace and with Namespace=false is shared across namespaces.
+* its like a virtual cluster which allows internal communication.
+* Namespace should be unique with in the namespace not with in the cluster.
+
+![Preview](./Image/kubernetes44.PNG)
+
+### Service in K8s
+* Every Pod when created gives a unique ip address and Name.
+* We need to access nginx with in cluster, but pod ips are not reliable, so as shown in the below image, lets create a k8s service resource which gives a consistent ip and name to access all the pods matching labels (equality based selection).
+* services act as network between the 2 different application containers.
+* services gives access for communication with in the cluster and out side the cluster.
+
+![Preview](./Image/kubernetes45.PNG)
+
+
+
+
+
+
+
 
 
 
