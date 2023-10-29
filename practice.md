@@ -1,6 +1,6 @@
 # Kubernetes
 
-* Kubernetes (k8s) is an open source orchestrator for deploying containerized applications.
+* Kubernetes (k8s) is an open source orchestrator tool which gives zero down time deployment containerized applications.
 * Kubernetes is a platform that manages container-based applications, their networking and storage components.
 
 ### Cluster: 
@@ -17,6 +17,11 @@ Cluster is collection of compute, storage and networking resources that Kubernet
 4. Using Terraform  
 
 ###  Azure Kubernetes Services(AKS)
+* install kubectl in laptop
+`choco install kubernetes-cli`
+* or
+`az aks install-cli
+`
 #### Steps to create aks
 1. Basic
 2. Node Pools
@@ -350,6 +355,26 @@ the job which has moe than one task is called CronJob.For example these are done
 * services gives access for communication with in the cluster and out side the cluster.
 
 ![Preview](./Image/kubernetes45.PNG)
+
+#### Now lets run nginx pods of replicaset=3 and create a service file .  
+
+![Preview](./Image/kubernetes46.PNG)
+![Preview](./Image/kubernetes47.PNG)
+
+adding alpine pod out of service network
+
+### Nodeport:
+* Nodeports are good while using local kubernetes clusters (creating instances and installing manually kubernetes cluster).
+
+### Load balancer:
+* when we use cloud based clusters load balancers are used to access the application from external world.
+
+### NmaesPACE:
+
+
+
+
+
 
 
 
